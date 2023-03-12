@@ -1,0 +1,36 @@
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.8rem;
+}
+
+.item input {
+  margin-right: 0.6rem;
+}
+
+.item label {
+  margin-right: 0.4rem;
+}
+
+.button {
+  padding: 0.2rem 0.2rem;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font: 12px;
+  transition: 150ms ease-in;
+}
+
+.button:hover {
+  transform: rotate(20deg);
+}
+
+.button svg {
+  width: 1.7em;
+  height: 1.7em;
+}
+
+.button.dark svg {
+  fill: white;
+}

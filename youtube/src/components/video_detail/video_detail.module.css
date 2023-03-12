@@ -1,0 +1,22 @@
+.description {
+  max-width: 615px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.more {
+  display: block;
+  -webkit-box-orient: none;
+  -webkit-line-clamp: none;
+}
+
+.show {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #606060;
+}

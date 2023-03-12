@@ -1,0 +1,55 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 1rem;
+}
+
+.toggleButton {
+  width: 2rem;
+  height: 2rem;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.toggleButton svg {
+  width: 1.5em;
+  height: 1.5em;
+  fill: var(--color-text);
+  transition: 250ms ease-out;
+}
+
+.toggleButton:hover svg {
+  fill: var(--color-point);
+}
+
+.filters {
+  display: flex;
+  justify-content: space-between;
+}
+
+.filter {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 1.1rem;
+  margin: 0.3rem;
+  text-transform: capitalize;
+  color: var(--color-text);
+  opacity: 0.8;
+}
+
+.filter:hover,
+.filter.selected {
+  color: var(--color-point);
+}
+
+.filter.selected {
+  opacity: 1;
+}
+
+/* .filter.selected::after {
+  content: '';
+  display: block;
+  margin-top: 0.2rem;
+  border: 0.5px solid var(--color-point);
+} */

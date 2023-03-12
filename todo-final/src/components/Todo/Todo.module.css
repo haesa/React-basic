@@ -1,0 +1,44 @@
+.todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.2rem 1rem;
+  margin: 0.2rem;
+}
+
+.checkbox {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+.text {
+  flex: 1 1 0%;
+  margin-left: 0.6rem;
+}
+
+.button {
+  padding: 0.2rem 0.2rem;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font: 12px;
+  transition: 150ms ease-out;
+}
+
+.button svg {
+  transition: 150ms ease-out;
+}
+
+.button:hover {
+  transform: rotate(15deg);
+}
+
+.button:hover svg {
+  fill: var(--color-point);
+}
+
+.button svg {
+  width: 1.7em;
+  height: 1.7em;
+  fill: var(--color-text);
+}

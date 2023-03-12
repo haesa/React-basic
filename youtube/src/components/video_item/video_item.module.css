@@ -1,0 +1,56 @@
+.video {
+  display: flex;
+  flex-direction: column;
+  padding: 0 0.5em;
+  margin-bottom: 5rem;
+  cursor: pointer;
+  transition: transform 250ms ease-in;
+}
+
+.video.list {
+  flex-direction: row;
+  flex-basis: 100%;
+  margin-bottom: 0.5rem;
+}
+
+.video.grid {
+  flex-basis: 25%;
+}
+
+.video:hover {
+  transform: scale(1.05);
+  /* z-index: 100; */
+}
+
+.thumbnail {
+  width: 100%;
+}
+
+.video.list .thumbnail {
+  width: 40%;
+}
+
+.metadata {
+  padding: 0.2em;
+  margin-left: 0.2rem;
+}
+
+.title,
+.channel {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.title {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  font-size: 1.1em;
+  margin-bottom: 0.5rem;
+}
+
+.channel {
+  color: #666666;
+  font-size: 0.8rem;
+}

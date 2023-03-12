@@ -1,0 +1,22 @@
+.category {
+  display: flex;
+  justify-content: space-between;
+  width: 1470px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.category li {
+  color: #030303;
+  background-color: rgba(0, 0, 0, 0.05);
+  padding: 4px 15px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+.category li.active {
+  background-color: #030303;
+  color: #fff;
+}

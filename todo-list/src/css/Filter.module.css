@@ -1,0 +1,30 @@
+.filter {
+  display: flex;
+  justify-content: space-between;
+  width: 180px;
+}
+
+.button {
+  padding-bottom: 0.25rem;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: 100ms ease;
+}
+
+.button.dark {
+  color: white;
+}
+
+.button:hover {
+  transform: scale(1.1);
+}
+
+.check {
+  font-weight: bold;
+  border-bottom: 2px solid black;
+}
+
+.check.dark {
+  border-bottom: 2px solid white;
+}

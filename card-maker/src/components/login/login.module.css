@@ -1,0 +1,25 @@
+@value makerGreen from '../../common/colors.css';
+@value makerWhite from '../../common/colors.css';
+
+.login {
+  width: 38em;
+  text-align: center;
+  background-color: makerWhite;
+}
+
+.list {
+  list-style: none;
+  width: 100%;
+  padding: 0 1em;
+}
+
+.button {
+  width: 100%;
+  padding: 1em 0;
+  margin-bottom: 1em;
+  border-radius: 2em;
+  border: 2px solid makerGreen;
+  background-color: makerWhite;
+  font-size: 1em;
+  cursor: pointer;
+}

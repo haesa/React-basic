@@ -1,0 +1,24 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.2rem 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.darkMode {
+  width: 2rem;
+  height: 2rem;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.darkMode svg {
+  width: 1.5em;
+  height: 1.5em;
+}
+
+.darkMode.dark svg {
+  fill: white;
+}

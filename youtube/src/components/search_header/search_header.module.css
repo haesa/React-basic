@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 4rem;
+  padding: 0 1.5em;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* start */
+.start {
+  display: flex;
+  align-items: center;
+  flex-basis: 8%;
+}
+
+.bar {
+  background-color: white;
+  border: none;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo .logoImg {
+  width: 2rem;
+  margin-right: 0.25rem;
+}
+
+.logo .title {
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: -0.5px;
+  transform: scaleY(1.5);
+}
+
+/* center */
+.center {
+  display: flex;
+  justify-content: center;
+  flex-basis: 50%;
+}
+
+.center .input {
+  flex-basis: 60%;
+  font-size: 1rem;
+  padding: 0.5rem 0.5rem;
+  border: 1px solid #cecece;
+}
+
+.center .button {
+  padding: 0.7rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 100;
+  background-color: #fafafa;
+  border: 1px solid #cecece;
+  border-left: none;
+  color: black;
+  cursor: pointer;
+}
+
+/* end */
+.end {
+  display: flex;
+  justify-content: flex-end;
+  flex-basis: 10%;
+}
+
+.end .login {
+  color: rgb(35, 104, 255);
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+  background-color: white;
+  border: 1px solid rgb(35, 104, 255);
+  cursor: pointer;
+}
+
+.end .login .icon {
+  margin-right: 0.5rem;
+}
