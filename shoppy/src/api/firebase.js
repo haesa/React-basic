@@ -3,12 +3,11 @@ import {
   getAuth,
   GoogleAuthProvider,
   signInWithPopup,
-  setPersistence,
-  browserSessionPersistence,
   signOut,
   onAuthStateChanged,
 } from 'firebase/auth';
-import { getDatabase, ref, child, get } from 'firebase/database';
+import { getDatabase, ref, get, set, remove } from 'firebase/database';
+import { v4 as uuid } from 'uuid';
 
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
@@ -17,11 +16,9 @@ const firebaseConfig = {
   projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
 };
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
-
-// Auth
 const auth = getAuth(app);
+const database = getDatabase(app);
 const provider = new GoogleAuthProvider();
 
 export function login() {
@@ -39,11 +36,8 @@ export function onUserStateChange(callback) {
   });
 }
 
-// Database
-const dbRef = ref(getDatabase());
-
 async function adminUser(user) {
-  return get(child(dbRef, 'admins')) //
+  return get(ref(database, 'admins')) //
     .then((snapshot) => {
       if (snapshot.exists()) {
         const admins = snapshot.val();
@@ -52,4 +46,15 @@ async function adminUser(user) {
       }
       return user;
     });
+}
+
+export async function addNewProduct(product, image) {
+  const id = uuid();
+  return set(ref(database, `products/${id}`), {
+    ...product,
+    id,
+    image,
+    price: parseInt(product.price),
+    options: product.options.split(','),
+  });
 }
