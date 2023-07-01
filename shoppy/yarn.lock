@@ -1653,6 +1653,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@cloudinary/transformation-builder-sdk@npm:^1.2.7":
+  version: 1.2.9
+  resolution: "@cloudinary/transformation-builder-sdk@npm:1.2.9"
+  dependencies:
+    "@cloudinary/url-gen": ^1.7.0
+  checksum: 30691c6fc1e606f1208e8106e3621ee5921dc1e02eecf67b27d91c5a3127b58bf0abb17eee2083f82d766118e09b8878a179f3c83b57a86957dc8397ef1a6696
+  languageName: node
+  linkType: hard
+
+"@cloudinary/url-gen@npm:^1.10.1, @cloudinary/url-gen@npm:^1.7.0":
+  version: 1.10.1
+  resolution: "@cloudinary/url-gen@npm:1.10.1"
+  dependencies:
+    "@cloudinary/transformation-builder-sdk": ^1.2.7
+  checksum: 924127449613187ca58dedc47a0365011ee0256371d040dd1a42c45e2703d4a36b9b605fe2125c3d743d7d0f6116c1a3d1854bdaa29c3d417a4b701ca0ec3767
+  languageName: node
+  linkType: hard
+
 "@csstools/normalize.css@npm:*":
   version: 12.0.0
   resolution: "@csstools/normalize.css@npm:12.0.0"
@@ -3319,6 +3337,32 @@ __metadata:
     "@svgr/plugin-svgo": ^5.5.0
     loader-utils: ^2.0.0
   checksum: 540391bd63791625d26d6b5e0dd3c716ef51176bfba53bf0979a1ac4781afd2672f4bef2d76cf3d9cdc8e9ee61bda6863ed405a237b10406633ede4cd524f1cc
+  languageName: node
+  linkType: hard
+
+"@tanstack/query-core@npm:4.29.19":
+  version: 4.29.19
+  resolution: "@tanstack/query-core@npm:4.29.19"
+  checksum: 91a79dbebebc139d118542a5fe83fb54a6f6448bbe1563db1a0bed0c6d44e1d023613efde3c4ac747c72d067110013ac56f90611bf8affc390eda1ac3f99066e
+  languageName: node
+  linkType: hard
+
+"@tanstack/react-query@npm:^4.29.19":
+  version: 4.29.19
+  resolution: "@tanstack/react-query@npm:4.29.19"
+  dependencies:
+    "@tanstack/query-core": 4.29.19
+    use-sync-external-store: ^1.2.0
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.0 || ^18.0.0
+    react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
+    react-native: "*"
+  peerDependenciesMeta:
+    react-dom:
+      optional: true
+    react-native:
+      optional: true
+  checksum: 2780ac35b4d1dabcd3e708b95891376e7e609109270d40442b33f4747c508c23e46bcadc692f997f81d38f62b5ab31f8e42bc9a785dfa4afe0c390adb6f37e52
   languageName: node
   linkType: hard
 
@@ -5311,6 +5355,27 @@ __metadata:
   languageName: node
   linkType: hard
 
+"cloudinary-core@npm:^2.13.0":
+  version: 2.13.0
+  resolution: "cloudinary-core@npm:2.13.0"
+  peerDependencies:
+    lodash: ">=4.0"
+  checksum: 5485fbc094b0722f6d4c6becfde431d3042c3c926a69c4bc2f6b373ac059b9b798703845c6cbf4a55ee2eb1c7718f5ec5130772117419755015b04dabd369be5
+  languageName: node
+  linkType: hard
+
+"cloudinary@npm:^1.37.3":
+  version: 1.37.3
+  resolution: "cloudinary@npm:1.37.3"
+  dependencies:
+    cloudinary-core: ^2.13.0
+    core-js: ^3.30.1
+    lodash: ^4.17.21
+    q: ^1.5.1
+  checksum: bb3d9d22517fe67d34ec5f65ebdcee0a949ea16c95f4d22a27bfc8906954342d031bf15cff9a75e685c31f192aa794816dbbda33a3201daf9ac7f4f6ab07ae7d
+  languageName: node
+  linkType: hard
+
 "co@npm:^4.6.0":
   version: 4.6.0
   resolution: "co@npm:4.6.0"
@@ -5554,7 +5619,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"core-js@npm:^3.19.2":
+"core-js@npm:^3.19.2, core-js@npm:^3.30.1":
   version: 3.31.0
   resolution: "core-js@npm:3.31.0"
   checksum: f7cf9b3010f7ca99c026d95b61743baca1a85512742ed2b67e8f65a72ac4f4fe0b90b00057783e886bdd39d3a295f42f845d33e7cba3973ed263df978343ab79
@@ -12120,7 +12185,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"q@npm:^1.1.2":
+"q@npm:^1.1.2, q@npm:^1.5.1":
   version: 1.5.1
   resolution: "q@npm:1.5.1"
   checksum: 147baa93c805bc1200ed698bdf9c72e9e42c05f96d007e33a558b5fdfd63e5ea130e99313f28efc1783e90e6bdb4e48b67a36fcc026b7b09202437ae88a1fb12
@@ -13055,10 +13120,13 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "shoppy@workspace:."
   dependencies:
+    "@cloudinary/url-gen": ^1.10.1
+    "@tanstack/react-query": ^4.29.19
     "@testing-library/jest-dom": ^5.14.1
     "@testing-library/react": ^13.0.0
     "@testing-library/user-event": ^13.2.1
     autoprefixer: ^10.4.14
+    cloudinary: ^1.37.3
     eslint-config-react-app: ^7.0.1
     firebase: ^9.23.0
     firebase-admin: ^11.9.0
@@ -13068,6 +13136,7 @@ __metadata:
     react-router-dom: ^6.14.0
     react-scripts: 5.0.1
     tailwindcss: ^3.3.2
+    uuid: ^9.0.0
     web-vitals: ^2.1.0
   languageName: unknown
   linkType: soft
@@ -14220,6 +14289,15 @@ __metadata:
     querystringify: ^2.1.1
     requires-port: ^1.0.0
   checksum: fbdba6b1d83336aca2216bbdc38ba658d9cfb8fc7f665eb8b17852de638ff7d1a162c198a8e4ed66001ddbf6c9888d41e4798912c62b4fd777a31657989f7bdf
+  languageName: node
+  linkType: hard
+
+"use-sync-external-store@npm:^1.2.0":
+  version: 1.2.0
+  resolution: "use-sync-external-store@npm:1.2.0"
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.0 || ^18.0.0
+  checksum: 5c639e0f8da3521d605f59ce5be9e094ca772bd44a4ce7322b055a6f58eeed8dda3c94cabd90c7a41fb6fa852210092008afe48f7038792fd47501f33299116a
   languageName: node
   linkType: hard
 
